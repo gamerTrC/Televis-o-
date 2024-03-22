@@ -1,0 +1,382 @@
+*{
+    user-select: none;
+}
+body{
+    padding: 0;
+    margin: 0;
+}
+.tudo{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+.divimagemtv{
+    display: flex;
+    width: 75%;
+    background-color: blue;
+}
+#tv{
+    display: flex;
+    width: 100%;
+}
+ul, li{
+    list-style: none;
+}
+.controle{
+    background-color: rgb(69, 69, 69);
+    display: flex;
+    margin: 0px 30px;
+    width: 15%;
+    height: 100%;
+    flex-direction: column;
+    border-radius: 5px;
+    box-shadow: 5px 5px 0px 5px rgb(43, 43, 43);
+    border: solid 2px rgb(43, 43, 43);
+    transition: all .5s;
+}
+.bot1{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+}
+.bot11{
+    font-family: monospace;
+    display: flex;
+    padding: 5px;
+    margin: 5px;
+    color: white;
+    background-color: green;
+    border-radius: 5px;
+    box-shadow: 2px 2px 0px .5px rgb(0, 82, 0);
+    transition: all .1s;
+}
+.bot111{
+    font-family: monospace;
+    display: flex;
+    padding: 5px;
+    margin: 5px;
+    color: white;
+    background-color: red;
+    border-radius: 5px;
+    box-shadow: 2px 2px 0px .5px rgb(139, 0, 0);
+    transition: all .1s;
+}
+.numeros{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.numeros1{
+    font-family: impaxt, fantasy;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 15px;
+    margin: 5px;
+    color: black;
+    background-color: gray;
+    border-radius: 50%;
+    box-shadow: 2px 2px 0px .5px rgb(94, 94, 94);
+    transition: all .1s;
+}
+.bot11:active,
+.bot111:active,
+.numeros1:active,
+.seta11:active,
+.seta22:active,
+.bot22:active{
+    transform: translate(2px, 2px);
+    box-shadow: 0px 0px 0px 0px rgb(7, 7, 7), inset 2px 2px 5px 1px rgb(47, 47, 47);
+}
+button{
+    border: none;
+}
+.seta1{
+    display: flex;
+    justify-content: center;
+}
+.seta11{
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 5px 20px;
+    background-color: orange;
+    border-radius: 50%;
+    color: white;
+    box-shadow: 2px 2px 0px .5px rgb(136, 89, 0);
+    transition: all .1s;
+}
+.seta2{
+    display: flex;
+    justify-content: space-around;
+}
+.seta22{
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 5px 20px;
+    background-color: orange;
+    border-radius: 50%;
+    color: white;
+    box-shadow: 2px 2px 0px .5px rgb(136, 89, 0);
+    transition: all .1s;
+}
+.bot2{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.bot22{
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 2px;
+    font-size: 25px;
+    color: blue;
+    background-color: rgb(56, 132, 255);
+    box-shadow: 2px 2px 0px .5px rgb(30, 75, 147);
+    border-radius: 5px;
+    transition: all .1s;
+}
+
+#videotv{
+    display: flex;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 98.5%;
+    transition: all .5s;
+}
+.video{
+    display: flex;
+    position: absolute;
+    padding: 7.2% 6.5% 7% 6.5%;
+    margin: 0;
+    width: 62.5%;
+    transition: all .5s;
+}
+
+.volume-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: monospace;
+    width: 200px;
+    height: 10px;
+    background-color: whitesmoke;
+    padding: 5px;
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity .5s ease;
+    position: absolute;
+    top: 81%;
+    left: 10%;
+    box-shadow: 0px 0px 20px .1px black;
+}
+  
+#volume-fill {
+    border-radius: 10px;
+    height: 100%;
+    background-color: #1e00ff;
+    width: 0;
+    transition: all .5s;
+}
+
+@media (max-width: 1150px){
+    .controle{
+        width: 30%;
+        margin: 30px 30px;
+    }
+    .video{
+        display: flex;
+        position: absolute;
+        padding: 6.4% 0% 7% 5.8%;
+        margin: 0;
+        width: 61%;
+    }
+    #videotv{
+        display: flex;
+        position: relative;
+        margin: 0;
+        padding: 0;
+        width: 91%;
+    }
+    .volume-bar{
+        position: absolute;
+        height: 9px;
+        width: 190px;
+        top: 78%;
+        left: 10%;
+    }
+}
+@media (max-width: 1100px){
+    .controle{
+        width: 30%;
+        margin: 30px 30px;
+    }
+    .video{
+        display: flex;
+        position: absolute;
+        padding: 6.4% 0% 7% 5.8%;
+        margin: 0;
+        width: 61%;
+    }
+    #videotv{
+        display: flex;
+        position: relative;
+        margin: 0;
+        padding: 0;
+        width: 90%;
+    }
+    .volume-bar{
+        position: absolute;
+        height: 9px;
+        width: 190px;
+        top: 77%;
+        left: 10%;
+    }
+}
+@media (max-width: 950px){
+    .controle{
+        width: 30%;
+        margin: 30px 30px;
+    }
+    .video{
+        display: flex;
+        position: absolute;
+        padding: 6.4% 0% 7% 5.8%;
+        margin: 0;
+        width: 61%;
+    }
+    #videotv{
+        display: flex;
+        position: relative;
+        margin: 0;
+        padding: 0;
+        width: 89%;
+    }
+    .volume-bar{
+        position: absolute;
+        height: 9px;
+        width: 190px;
+        top: 77%;
+        left: 10%;
+    }
+}
+@media (max-width: 840px){
+    .controle{
+        width: 30%;
+        margin: 30px 30px;
+    }
+    .video{
+        display: flex;
+        position: absolute;
+        padding: 6.4% 0% 7% 5.8%;
+        margin: 0;
+        width: 61%;
+    }
+    #videotv{
+        display: flex;
+        position: relative;
+        margin: 0;
+        padding: 0;
+        width: 88%;
+    }
+}
+@media (max-width: 720px){
+    .controle{
+        width: 30%;
+        margin: 30px 30px;
+    }
+    .video{
+        display: flex;
+        position: absolute;
+        padding: 6.4% 0% 7% 5.8%;
+        margin: 0;
+        width: 61%;
+    }
+    #videotv{
+        display: flex;
+        position: relative;
+        margin: 0;
+        padding: 0;
+        width: 87%;
+    }
+    .volume-bar{
+        position: absolute;
+        height: 6px;
+        width: 150px;
+        top: 76%;
+        left: 9.5%;
+    }
+}
+@media (max-width: 650px){
+    .controle{
+        width: 50%;
+    }
+    .video{
+        display: flex;
+        position: absolute;
+        padding: 5.1% 6.5% 7% 4.5%;
+        margin: 0;
+        width: 45%;
+    }
+    #videotv{
+        display: flex;
+        position: relative;
+        margin: 0;
+        padding: 0;
+        width: 97%;
+    }
+    .volume-bar{
+        position: absolute;
+        height: 4px;
+        width: 200px;
+        top: 70%;
+        left: 10%;
+    }
+}
+@media (max-width: 500px){
+    .tudo{
+        display: flex;
+        flex-direction: column;
+    }
+    .controle{
+        width: 60%;
+    }
+    .tv{
+        width: 100%;
+    }
+    .divimagemtv{
+        width: 100%;
+    }
+    .video{
+        display: flex;
+        position: absolute;
+        padding: 10% 0% 7% 9.2%;
+        margin: 0;
+        width: 90%;
+    }
+    #videotv{
+        display: flex;
+        position: relative;
+        margin: 0;
+        padding: 0;
+        width: 90%;
+    }
+    .volume-bar{
+        position: absolute;
+        height: 5px;
+        width: 77.8%;
+        top: 80%;
+        left: 10%;
+    }
+}
