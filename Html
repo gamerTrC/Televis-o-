@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Televisão</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='televisao.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <nav>
+        <script src="scriptmenu.js"></script>
+    </nav>
+    <div class="tudo">
+        <div class="divimagemtv">
+            <img id="tv" src="img/TV.png">
+            <div class="video">
+            <video id="videotv" class="videotv" src="tv estragada televisão colorida transição pra vídeos no YouTube gringa aesthetic📺📺📺.mp4" autoplay></video>
+            <div class="volume-bar">
+                Volume:
+                <div id="volume-fill"></div>
+            </div>
+            </div>
+        </div>
+        
+        <div class="controle">
+            <li2 class="bot1">
+                <button id="b1" class="bot11 b1" onclick="ligar()">Ligar</button>
+                <button id="b2" class="bot111 b2" onclick="desligar()" disabled>Desligar</button>
+            </li2>
+            <br>
+            <l1 class="numeros">
+                <button id="b3" class="numeros1" onclick="c1()" disabled>1</button>
+                <button id="b4" class="numeros1" onclick="c2()" disabled>2</button>
+                <button id="b5" class="numeros1" onclick="c3()" disabled>3</button>
+            </l1>
+            <l1 class="numeros">
+                <button id="b6" class="numeros1" onclick="c4()" disabled>4</button>
+                <button id="b7" class="numeros1" onclick="c5()" disabled>5</button>
+                <button id="b8" class="numeros1" onclick="c6()" disabled>6</button>
+            </l1>
+            <l1 class="numeros">
+                <button id="b9" class="numeros1" onclick="c7()" disabled>7</button>
+                <button id="b10" class="numeros1" onclick="c8()" disabled>8</button>
+                <button id="b11" class="numeros1" onclick="c9()" disabled>9</button>
+            </l1>
+            <br>
+            <li class="seta1">
+                <button id="b12" class="seta11 setas" onclick="passar()" disabled>▲ ch+</button>
+            </li>
+            <li class="seta2">
+                <button id="b13" class="seta22 setas" onclick="menos()" disabled>&#9668; vol-</button>
+                <button id="b14" class="seta22 setas" onclick="mais()" disabled>vol+ &#9658;</button>
+            </li>
+            <li class="seta1">
+                <button id="b15" class="seta11 setas" onclick="voltar()" disabled>▼ ch-</button>
+            </li>
+            <br>
+            <li class="bot2">
+                <button id="b16" class="bot22" onclick="menosv()" disabled>⏪</button>
+                <button id="b17" class="bot22" onclick="pause()" disabled>⏸</button>
+                <button id="b18" class="bot22" onclick="play()" disabled>▶️</button>
+                <button id="b19" class="bot22" onclick="maisv()">⏩</button>
+            </li>
+            <br>
+        </div>
+    </div>
+    <script src="televisao.js"></script>
+</body>
+</html>
