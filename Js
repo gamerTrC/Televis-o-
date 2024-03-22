@@ -1,158 +1,160 @@
-<script>
-        let video = document.getElementsByClassName("video")[0];
+let video = document.getElementsByClassName("videotv")[0]; 
 
-        function play(){
-            video.play();
-        }
-        function pause(){
-            video.pause();
-        }
-        function mais(){
-            video.volume += 0.1;
-        }
-        function menos(){
-            video.volume -= 0.1;
-        }
-        function maisv(){
-            video.currentTime += 10;
-        }
-        function menosv(){
-            video.currentTime -= 10;
-        }
-
-        var videos = ["videos.mp4 0", "vide.mp42" ];
-        var curretVideosIndex = 0;
-
-        function passar() {
-            if (curretVideosIndex < 8){
-                curretVideosIndex++;
-            }
-            else{
-                curretVideosIndex = 0;
-            }
-            document.getElementById("video").src = videos[curretVideosIndex];2
-        }
-        function voltar(){
-            if(curretVideosIndex > 0){
-                curretVideosIndex--;
-            }
-            else{
-                curretVideosIndex = 8;
-            }
-            document.getElementById("video").src = videos[curretVideosIndex];
-        }
-
-        function c1(){
-            document.getElementById("video").src = videos[0];
-        }
-        function c2(){
-            document.getElementById("video").src = videos[1];
-        }
-        function c3(){
-            document.getElementById("video").src = videos[2];
-        }
-        function c4(){
-            document.getElementById("video").src = videos[3];
-        }
-        function c5(){
-            document.getElementById("video").src = videos[4];
-        }
-        function c6(){
-            document.getElementById("video").src = videos[5];
-        }
-        function c7(){
-            document.getElementById("video").src = videos[6];
-        }
-        function c8(){
-            document.getElementById("video").src = videos[7];
-        }
-        function c9(){
-            document.getElementById("video").src = videos[8];
-        }
-
-        var primeiroBotaoClicado = false;
-
-      
-
-        function ligar(){
-            if(!primeiroBotaoClicado) {
-                document.getElementById("video").src = videos[9];
-                primeiroBotaoClicado = true;
-                document.getElementById("b2").disabled = false
-                document.getElementById("b3").disabled = false
-                document.getElementById("b4").disabled = false
-                document.getElementById("b5").disabled = false
-                document.getElementById("b6").disabled = false
-                document.getElementById("b7").disabled = false
-                document.getElementById("b8").disabled = false
-                document.getElementById("b9").disabled = false
-                document.getElementById("b10").disabled = false
-                document.getElementById("b11").disabled = false
-                document.getElementById("b12").disabled = false
-                document.getElementById("b13").disabled = false
-                document.getElementById("b14").disabled = false
-                document.getElementById("b15").disabled = false
-                document.getElementById("b16").disabled = false
-                document.getElementById("b17").disabled = false
-                document.getElementById("b18").disabled = false
-                document.getElementById("b19").disabled = false
-            }
-        }
+function play(){
+    video.play();
+}
+function pause(){
+    video.pause();
+}
+function mais(){
+    video.volume += 0.1;
+}
+function menos(){
+    video.volume -= 0.1;
+}
+function maisv(){
+    video.currentTime += 10;
+}
+function menosv(){
+    video.currentTime -= 10;
+}
 
 
-        function desligar(){
-            document.getElementById("video").src = videos[10];
-            primeiroBotaoClicado = false;
-            document.getElementById("b2").disabled = false;
-                document.getElementById("b3").disabled = true;
-                document.getElementById("b4").disabled = true;
-                document.getElementById("b5").disabled = true;
-                document.getElementById("b6").disabled = true;
-                document.getElementById("b7").disabled = true;
-                document.getElementById("b8").disabled = true;
-                document.getElementById("b9").disabled = true;
-                document.getElementById("b10").disabled = true;
-                document.getElementById("b11").disabled = true;
-                document.getElementById("b12").disabled = true;
-                document.getElementById("b13").disabled = true;
-                document.getElementById("b14").disabled = true;
-                document.getElementById("b15").disabled = true;
-                document.getElementById("b16").disabled = true;
-                document.getElementById("b17").disabled = true;
-                document.getElementById("b18").disabled = true;
-                document.getElementById("b19").disabled = true;
-        }
 
-        function mais(){
-            var video = document.getElementById("video");
-            if(video.volume < 1){
-                video.volume += 0.1;
-            }
-            updateVolumeBar();
-            showVolumeBar();
-        }
 
-        function menos(){
-            var video = document.getElementById("video");
-            if(video.volume > 0){
-                video.volume -= 0.1;
-            }
-            updateVolumeBar();
-            showVolumeBar();
-        }
+
+
+
+var videos = ["videoexemplo/mp4", "videos/ligar.mp4", "videos/desligar.mp4"];
+var currentVideoIndex = 0;
+
+function passar() {
+    if (currentVideoIndex < 8) {
+        currentVideoIndex++;
+    } else {
+        currentVideoIndex = 0;
+    }
+    document.getElementById("videotv").src = videos[currentVideoIndex];2
+    }
+
+function voltar() {
+    if (currentVideoIndex > 0) {
+        currentVideoIndex--;
+    } else {
+        currentVideoIndex = 8;
+    }
+    document.getElementById("videotv").src = videos[currentVideoIndex];
+}
+
+function c1(){
+    document.getElementById("videotv").src = videos[0];
+}
+function c2(){
+    document.getElementById("videotv").src = videos[1];
+}
+function c3(){
+    document.getElementById("videotv").src = videos[2];
+}
+function c4(){
+    document.getElementById("videotv").src = videos[3];
+}
+function c5(){
+    document.getElementById("videotv").src = videos[4];
+}
+function c6(){
+    document.getElementById("videotv").src = videos[5];
+}
+function c7(){
+    document.getElementById("videotv").src = videos[6];
+}
+function c8(){
+    document.getElementById("videotv").src = videos[7];
+}
+function c9(){
+    document.getElementById("videotv").src = videos[8];
+}
         
-        function updateVolumeBar(){
-            var video = document.getElementById("video");
-            var volumeBar = document.getElementById("volume-fill");
-            var percentage = Math.round(video.volume * 100);
-            volumeBar.style.width = percentage + "%";
-        }
 
-        function showVolumeBar() {
-            var volumeBar = document.querySelector(".volume-bar");
-            volumeBar.style.opacity = 1;
-            setTimeout(function(){
-                volumeBar.style.opacity = 0;
-            }, 2000)
-        }
-    </script>
+
+var primeiroBotaoClicado = false;
+
+function ligar() {
+    if (!primeiroBotaoClicado) {
+        document.getElementById("videotv").src = videos[9];
+        primeiroBotaoClicado = true;
+        document.getElementById("b2").disabled = false;
+        document.getElementById("b3").disabled = false;
+        document.getElementById("b4").disabled = false;
+        document.getElementById("b5").disabled = false;
+        document.getElementById("b6").disabled = false;
+        document.getElementById("b7").disabled = false;
+        document.getElementById("b8").disabled = false;
+        document.getElementById("b9").disabled = false;
+        document.getElementById("b10").disabled = false;
+        document.getElementById("b11").disabled = false;
+        document.getElementById("b12").disabled = false;
+        document.getElementById("b13").disabled = false;
+        document.getElementById("b14").disabled = false;
+        document.getElementById("b15").disabled = false;
+        document.getElementById("b16").disabled = false;
+        document.getElementById("b17").disabled = false;
+        document.getElementById("b18").disabled = false;
+        document.getElementById("b19").disabled = false;
+    }
+}
+
+    function desligar() {
+    document.getElementById("videotv").src = videos[10];
+    primeiroBotaoClicado = false;
+    document.getElementById("b2").disabled = true;
+    document.getElementById("b3").disabled = true;
+    document.getElementById("b4").disabled = true;
+    document.getElementById("b5").disabled = true;
+    document.getElementById("b6").disabled = true;
+    document.getElementById("b7").disabled = true;
+    document.getElementById("b8").disabled = true;
+    document.getElementById("b9").disabled = true;
+    document.getElementById("b10").disabled = true;
+    document.getElementById("b11").disabled = true;
+    document.getElementById("b12").disabled = true;
+    document.getElementById("b13").disabled = true;
+    document.getElementById("b14").disabled = true;
+    document.getElementById("b15").disabled = true;
+    document.getElementById("b16").disabled = true;
+    document.getElementById("b17").disabled = true;
+    document.getElementById("b18").disabled = true;
+    document.getElementById("b19").disabled = true;
+}
+
+function mais() {
+    var video = document.getElementById("videotv");
+    if (video.volume < 1) {
+      video.volume += 0.1;
+    }
+    updateVolumeBar();
+    showVolumeBar();
+  }
+  
+  function menos() {
+    var video = document.getElementById("videotv");
+    if (video.volume > 0) {
+      video.volume -= 0.1;
+    }
+    updateVolumeBar();
+    showVolumeBar();
+  }
+  
+  function updateVolumeBar() {
+    var video = document.getElementById("videotv");
+    var volumeBar = document.getElementById("volume-fill");
+    var percentage = Math.round(video.volume * 100);
+    volumeBar.style.width = percentage + "%";
+  }
+  
+  function showVolumeBar() {
+    var volumeBar = document.querySelector(".volume-bar");
+    volumeBar.style.opacity = 1;
+    setTimeout(function() {
+      volumeBar.style.opacity = 0;
+    }, 2000);
+  }
